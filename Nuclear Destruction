@@ -53,6 +53,10 @@ int main()
 		display("How many people live in " + location + "? ");
 		cin >> population;
 		Sleep(1000);
+		
+		display("What is the magnitude of this nuke(ex: small, medium, or large)? ");
+		cin >> size;
+		Sleep(1000);
 
 		display("loading");
 		cout << endl;
