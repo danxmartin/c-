@@ -26,52 +26,101 @@ void display(string out) {
 		cout << out.at(i);
 	}
 }
+
+//This method will create a list of random numbers
+void randNumber(string out) {
+	for (int i = 0; i < 100; i++) {
+		display(0);
+	}
+}
  
 int main()
 {
 
 	//variables
-	string password2 = "@Override;randomize.stringRDM.disarm()";
-	string password1 = "76328192";
+	string password2 = "@Override";
+	string password1 = "password123";
 	string password = "";
-	int numberOfNukes = 0.0;
+	string size1 = "small";
+	string size2 = "medium";
+	string size3 = "large";
+	string size = "";
 	string location = "";
+	int numberOfNukes = 0;
 	int population = 0;
+	
 	int hold;
 
 	//User interaction
 	display("Please enter the password: ");
 	cin >> password;
-	if ( password == password1) { //This is ran if "76328192" is typed as the password.
+	if ( password == password1) { //This is ran if "password123" is typed as the password.
 		display("Welcome. ");
 		Sleep(20);
 
-		display("Which country would you like to nuke: ");
+		display("Which country would you like to give money to: ");
 		cin >> location;
 		Sleep(500);
 
 		display("How many people live in " + location + "? ");
 		cin >> population;
 		Sleep(1000);
-		
-		display("What is the magnitude of this nuke(ex: small, medium, or large)? ");
+
+		display("What is the magnitude of this donation(ex: small, medium, or large)? ");
 		cin >> size;
 		Sleep(1000);
+		system("CLS");
+		cout << endl;
 
-		display("loading");
+		cout << "Accessing account.";
 		cout << endl;
 		Sleep(1000);
-
-		display("loading");
+		system("CLS");
+		cout << "Accessing account..";
 		cout << endl;
 		Sleep(1000);
+		system("CLS");
+		cout << "Accessing account...";
+		Sleep(1000);
 
-		display("loading");
+		cout << endl;
+		cout << "Transfering funds.";
 		cout << endl;
 		Sleep(1000);
+		system("CLS");
+		cout << "Transfering funds..";
 		cout << endl;
+		Sleep(1000);
+		system("CLS");
+		cout << "Transfering funds...";
+		Sleep(1000);
+		system("CLS");
 
-		display("You have successfully nuked " + location + ". Congradulations.");
+		display("Transfer complete");
+		Sleep(1000);
+		system("CLS");
+		if (size == size1 || size == "s" || size == "S") {
+			//calculations
+			population = (population * .75);
+			string newPopulation = to_string(population);
+			display("You have successfully donated to " + location + ", with 25% of the population richer, the current poverty number is " + newPopulation + ".");
+		} 
+		else if (size == size2 || size == "m" || size == "M") {
+			population = (population * .50);
+			string newPopulation = to_string(population);
+			display("You have successfully donated to " + location + ", with 50% of the population richer, the current poverty number is " + newPopulation + ".");
+		} 
+		else if (size == size3 || size == "l" || size == "L") {
+			population = (population * .25);
+			string newPopulation = to_string(population);
+			display("You have successfully donated to " + location + ", with 75% of the population richer, the current poverty number is " + newPopulation + ".");
+		}
+		else {
+			display("That is not a valid option. Process terminated.");
+		}
+		cout << endl;
+		display("Thank you for your generosity.");
+
 
 		cin >> hold; //Prevents console from closing
 	}
@@ -725,78 +774,77 @@ int main()
 		pOverride("43268750");
 		cout << endl;
 		pOverride("21547310");
-		cout << endl;
+		cout << endl; 
 		Sleep(1000);
 		system("CLS");
 		display("Welcome. ");
 		Sleep(20);
-		display("Which country would you like to nuke: ");
+
+		display("Which country would you like to give money to: ");
 		cin >> location;
-		Sleep(1000);
-		display("loading");
-		cout << endl;
-		Sleep(1000);
-		display("loading");
-		cout << endl;
-		Sleep(1000);
-		display("loading");
-		cout << endl;
-		Sleep(1000);
-		cout << endl;
-		display("You have successfully nuked " + location + ". Congradulations.");
-		Sleep(1000);
-		cout << endl;
-		cout << endl;
-		display("Since the password you entered is an armageddon password, all files will be whiped.");
-		cout << endl;
 		Sleep(500);
-		display("Deleting files: ");
-		pOverride("Files Deleted: C:/Nuclear Program/Warhead 1");
-		cout << endl;
-		pOverride("Files Deleted: C:/Nuclear Program/Warhead 2");
-		cout << endl;
-		pOverride("Files Deleted: C:/Nuclear Program/Warhead 3");
-		cout << endl;
-		pOverride("Files Deleted: C:/Nuclear Program/Warhead 4");
-		cout << endl;
-		pOverride("Files Deleted: C:/Nuclear Program/Warhead 5");
-		cout << endl;
-		pOverride("Files Deleted: C:/Nuclear Program/WarHead 6");
-		cout << endl;
-		pOverride("Files Deleted: C:/Nuclear Program/Warhead 7");
-		cout << endl;
-		pOverride("Files Deleted: C:/Nuclear Program/Warhead 8");
-		cout << endl;
-		pOverride("Files Deleted: C:/Nuclear Program/Warhead 9");
-		cout << endl;
-		pOverride("Files Deleted: C:/Nuclear Program/Warhead 10");
-		cout << endl;
-		pOverride("Files Deleted: C:/Nuclear Program/Targetting System");
-		cout << endl;
-		pOverride("Files Deleted: C:/Nuclear Program/Targetting System 2");
-		cout << endl;
-		pOverride("Files Deleted: C:/Nuclear Program/Targetting System 3");
-		cout << endl;
-		pOverride("Files Deleted: C:/Nuclear Program/Targetting System 4");
-		cout << endl;
-		pOverride("Files Deleted: C:/Windows");
-		cout << endl;
-		pOverride("Files Deleted: C:/Users");
-		cout << endl;
-		pOverride("Files Deleted: C:/ProgramFiles");
-		cout << endl;
-		pOverride("Files Deleted: C:/Microsoft");
-		cout << endl;
-		pOverride("Files Deleted: C:/Software");
-		cout << endl;
-		Sleep(500);
+
+		display("How many people live in " + location + "? ");
+		cin >> population;
+		Sleep(1000);
+
+		display("What is the magnitude of this donation(ex: small, medium, or large)? ");
+		cin >> size;
+		Sleep(1000);
 		system("CLS");
-		display("All files deleted.");
 		cout << endl;
-		display("Goodbye.");
-		Sleep(500);
+
+		cout << "Accessing account.";
+		cout << endl;
+		Sleep(1000);
 		system("CLS");
-		cin >> hold;
+		cout << "Accessing account..";
+		cout << endl;
+		Sleep(1000);
+		system("CLS");
+		cout << "Accessing account...";
+		Sleep(1000);
+		system("CLS");
+
+		cout << endl;
+		cout << "Transfering funds.";
+		cout << endl;
+		Sleep(1000);
+		system("CLS");
+		cout << "Transfering funds..";
+		cout << endl;
+		Sleep(1000);
+		system("CLS");
+		cout << "Transfering funds...";
+		Sleep(1000);
+		system("CLS");
+
+		display("Transfer complete");
+		Sleep(1000);
+		system("CLS");
+		if (size == size1 || size == "s" || size == "S") {
+			//calculations
+			population = (population * .75);
+			string newPopulation = to_string(population);
+			display("You have successfully donated to " + location + ", with 25% of the population richer, the current poverty number is " + newPopulation + ".");
+		}
+		else if (size == size2 || size == "m" || size == "M") {
+			population = (population * .50);
+			string newPopulation = to_string(population);
+			display("You have successfully donated to " + location + ", with 50% of the population richer, the current poverty number is " + newPopulation + ".");
+		}
+		else if (size == size3 || size == "l" || size == "L") {
+			population = (population * .25);
+			string newPopulation = to_string(population);
+			display("You have successfully donated to " + location + ", with 75% of the population richer, the current poverty number is " + newPopulation + ".");
+		}
+		else {
+			display("That is not a valid option. Process terminated.");
+		}
+		cout << endl;
+		display("Thank you for your generosity.");
+
+		cin >> hold; //Prevents console from closing
 		return 0;
 	}
 	else {
