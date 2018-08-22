@@ -8,6 +8,7 @@ Description:	Has a list of passwords which have different functions if different
 #include<string>  //Used to incorperate strings
 #include<windows.h> //Used for Sleep method
 #include<cstdlib> //Used for random number generation
+#include<time.h> //used to set seed
 
 using namespace std; 
 
@@ -148,6 +149,7 @@ int main()
 
 
 		for (int i = 0; i < 500; i++) {
+			srand(time(NULL));
 			cout << rand() << rand() << endl;
 			Sleep(10);
 		}
